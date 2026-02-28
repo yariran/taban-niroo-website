@@ -10,92 +10,69 @@ export function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 60);
     };
-
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <header
-      className={`fixed top-0 inset-x-0 z-50 border-b border-border/70 transition-all duration-300 ${
-        isScrolled ? "bg-background/90 backdrop-blur-xl" : "bg-background/70 backdrop-blur-lg"
-      }`}
-    >
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-8 md:py-4">
+    <header className="fixed top-4 inset-x-0 z-50 flex justify-center pointer-events-none">
+      {/* NAVBAR PILL */}
+      <div
+        className={`
+          pointer-events-auto
+          flex w-full max-w-6xl items-center justify-between
+          rounded-full
+          transition-all duration-300 ease-out
+          ${
+            isScrolled
+              ? "h-14 bg-white/85 backdrop-blur-xl shadow-lg border border-black/5 px-6"
+              : "h-12 bg-white/30 backdrop-blur-md border border-white/30 px-5"
+          }
+        `}
+      >
         {/* Logo */}
         <Link
           href="/"
-          className={`text-sm font-semibold tracking-[0.18em] uppercase transition-colors duration-300 ${
-            isScrolled ? "text-foreground" : "text-foreground"
+          className={`text-sm font-semibold tracking-[0.18em] uppercase transition-colors ${
+            isScrolled ? "text-black" : "text-white"
           }`}
         >
           Taban Niroo
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden items-center gap-8 md:flex">
-          <Link
-            href="/about"
-            className={`text-sm transition-colors ${
-              isScrolled
-                ? "text-muted-foreground hover:text-foreground"
-                : "text-muted-foreground hover:text-foreground"
-            }`}
-          >
+        <nav
+          className={`hidden md:flex items-center gap-7 text-sm transition-colors ${
+            isScrolled ? "text-black/70" : "text-white/80"
+          }`}
+        >
+          <Link href="/about" className="hover:text-black">
             About Us
           </Link>
-          <Link
-            href="/products"
-            className={`text-sm transition-colors ${
-              isScrolled
-                ? "text-muted-foreground hover:text-foreground"
-                : "text-muted-foreground hover:text-foreground"
-            }`}
-          >
+          <Link href="/products" className="hover:text-black">
             Products
           </Link>
-          <Link
-            href="/projects"
-            className={`text-sm transition-colors ${
-              isScrolled
-                ? "text-muted-foreground hover:text-foreground"
-                : "text-muted-foreground hover:text-foreground"
-            }`}
-          >
+          <Link href="/projects" className="hover:text-black">
             Projects &amp; Partners
           </Link>
-          <Link
-            href="/blog"
-            className={`text-sm transition-colors ${
-              isScrolled
-                ? "text-muted-foreground hover:text-foreground"
-                : "text-muted-foreground hover:text-foreground"
-            }`}
-          >
+          <Link href="/blog" className="hover:text-black">
             Blog – R&amp;D
           </Link>
-          <Link
-            href="/contact"
-            className={`text-sm transition-colors ${
-              isScrolled
-                ? "text-muted-foreground hover:text-foreground"
-                : "text-muted-foreground hover:text-foreground"
-            }`}
-          >
+          <Link href="/contact" className="hover:text-black">
             Contact
           </Link>
         </nav>
 
         {/* CTA */}
-        <div className="hidden items-center gap-6 md:flex">
+        <div className="hidden md:flex items-center">
           <Link
             href="/contact"
-            className={`rounded-full px-4 py-2 text-sm font-medium transition-all ${
+            className={`rounded-full px-5 h-9 flex items-center text-sm font-medium transition-all ${
               isScrolled
-                ? "bg-foreground text-background hover:bg-foreground/90"
-                : "bg-foreground text-background hover:bg-foreground/90"
+                ? "bg-black text-white hover:bg-black/90"
+                : "bg-white text-black hover:bg-white/90"
             }`}
           >
             Get in touch
@@ -106,52 +83,35 @@ export function Header() {
         <button
           type="button"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className={`transition-colors md:hidden ${isScrolled ? "text-foreground" : "text-white"}`}
+          className={`md:hidden transition-colors ${
+            isScrolled ? "text-black" : "text-white"
+          }`}
           aria-label="Toggle menu"
         >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="border-t border-border bg-background/95 px-6 py-8 backdrop-blur-xl md:hidden">
+        <div className="pointer-events-auto fixed inset-x-4 top-[4.5rem] z-40 rounded-2xl border border-border bg-background/95 px-6 py-8 backdrop-blur-xl md:hidden">
           <nav className="flex flex-col gap-6">
-            <Link
-              href="/about"
-              className="text-lg text-foreground"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              About Us
-            </Link>
-            <Link
-              href="/products"
-              className="text-lg text-foreground"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Products
-            </Link>
-            <Link
-              href="/projects"
-              className="text-lg text-foreground"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Projects &amp; Partners
-            </Link>
-            <Link
-              href="/blog"
-              className="text-lg text-foreground"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Blog – R&amp;D
-            </Link>
-            <Link
-              href="/contact"
-              className="text-lg text-foreground"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Contact
-            </Link>
+            {[
+              ["About Us", "/about"],
+              ["Products", "/products"],
+              ["Projects & Partners", "/projects"],
+              ["Blog – R&D", "/blog"],
+              ["Contact", "/contact"],
+            ].map(([label, href]) => (
+              <Link
+                key={href}
+                href={href}
+                className="text-lg text-foreground"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {label}
+              </Link>
+            ))}
             <Link
               href="/contact"
               className="mt-4 rounded-full bg-foreground px-5 py-3 text-center text-sm font-medium text-background"

@@ -7,25 +7,25 @@ const word = "INSPIRE";
 
 const sideImages = [
   {
-    src: "/images/hero-side-1.png",
+    src: "/images/_MP_1176.tif",
     alt: "High-voltage composite insulator on transmission line",
     position: "left",
     span: 1,
   },
   {
-    src: "/images/hero-side-2.png",
+    src: "/images/_L7A7164.JPG",
     alt: "Power transmission equipment and insulators",
     position: "left",
     span: 1,
   },
   {
-    src: "/images/hero-side-3.png",
+    src: "/images/2X3B5772E.jpg",
     alt: "Composite insulator manufacturing",
     position: "right",
     span: 1,
   },
   {
-    src: "/images/hero-side-4.png",
+    src: "/images/_MP_1268 2.jpg",
     alt: "Power grid and high-voltage infrastructure",
     position: "right",
     span: 1,

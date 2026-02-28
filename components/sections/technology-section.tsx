@@ -60,7 +60,7 @@ function ScrollRevealText({ text }: { text: string }) {
 
 const sideImages = [
   {
-    src: "/images/hero-side-1.png",
+    src: "/images/_MP_1176.tif",
     alt: "Transmission line composite insulators",
     position: "left",
     span: 1,
@@ -72,13 +72,13 @@ const sideImages = [
     span: 1,
   },
   {
-    src: "/images/hero-side-3.png",
+    src: "/images/_L7A7018.jpg",
     alt: "Composite insulator production",
     position: "right",
     span: 1,
   },
   {
-    src: "/images/hero-side-4.png",
+    src: "/images/_MP_1014.tif",
     alt: "High-voltage infrastructure",
     position: "right",
     span: 1,
@@ -198,7 +198,7 @@ export function TechnologySection() {
               }}
             >
               <Image
-                src="/images/hero-main.png"
+                src="/images/_L7A7232.JPG"
                 alt="Taban Niroo composite insulators and power transmission"
                 fill
                 className="object-cover"

@@ -83,7 +83,7 @@ export function PhilosophySection() {
                 }}
               >
                 <Image
-                  src="/images/product-backpack.png"
+                  src="/images/Long.jpg"
                   alt="Long rod and transmission network insulators"
                   fill
                   className="object-cover"
@@ -106,7 +106,7 @@ export function PhilosophySection() {
                 }}
               >
                 <Image
-                  src="/images/02cdc426-dff4-4dff-b131-1b134c3699b5.png"
+                  src="/images/400kV-Post Hybrid Housing.png"
                   alt="Post and hybrid insulators"
                   fill
                   className="object-cover"

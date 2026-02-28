@@ -12,14 +12,14 @@ export function GallerySection() {
   const lastScrollRef = useRef(0);
 
   const images = [
-    { src: "/images/bottle-biked.png", alt: "Composite long rod insulator" },
-    { src: "/images/bottle-lake.png", alt: "Transmission line insulator" },
-    { src: "/images/bottle-water.png", alt: "Post insulator installation" },
-    { src: "/images/bottle-stream.png", alt: "Hybrid insulator" },
-    { src: "/images/bottle-fire.png", alt: "Transformer bushing" },
-    { src: "/images/bottle-snow.png", alt: "Cable accessories" },
-    { src: "/images/bottle-mountain.png", alt: "Interphase spacer" },
-    { src: "/images/bottle-canyon.png", alt: "DPL insulator product" },
+    { src: "/images/_MG_0401.jpg", alt: "Composite long rod insulator" },
+    { src: "/images/_MP_1268.jpg", alt: "Transmission line insulator" },
+    { src: "/images/_MP_1500.jpg", alt: "Post insulator installation" },
+    { src: "/images/2X3B5599E copy.jpg", alt: "Hybrid insulator" },
+    { src: "/images/_MG_0387.jpg", alt: "Transformer bushing" },
+    { src: "images/DSC09974.jpg", alt: "Cable accessories" },
+    { src: "images/_MP_1454.jpg", alt: "Interphase spacer" },
+    { src: "/images/_MP_1312.jpg", alt: "DPL insulator product" },
   ];
 
   // Calculate section height based on content width
