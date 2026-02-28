@@ -7,7 +7,7 @@ const word = "INSPIRE";
 
 const sideImages = [
   {
-    src: "/images/_MP_1176.tif",
+    src: "/images/_MP_1176.png",
     alt: "High-voltage composite insulator on transmission line",
     position: "left",
     span: 1,

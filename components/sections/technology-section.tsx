@@ -60,7 +60,7 @@ function ScrollRevealText({ text }: { text: string }) {
 
 const sideImages = [
   {
-    src: "/images/_MP_1176.tif",
+    src: "/images/_MP_1176.png",
     alt: "Transmission line composite insulators",
     position: "left",
     span: 1,
@@ -78,7 +78,7 @@ const sideImages = [
     span: 1,
   },
   {
-    src: "/images/_MP_1014.tif",
+    src: "/images/_MP_1014.png",
     alt: "High-voltage infrastructure",
     position: "right",
     span: 1,
